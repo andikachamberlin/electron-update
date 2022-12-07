@@ -15,40 +15,42 @@ import log from 'electron-log';
 import MenuBuilder from './menu';
 import { resolveHtmlPath } from './util';
 
+console.log('-----------------', app.isPackaged);
+
 log.transports.file.resolvePath = () => path.join('logs/main.log');
 
-log.info('==================================================');
-log.info('App Version', app.getVersion());
-log.info('==================================================');
+// log.info('==================================================');
+// log.info('App Version', app.getVersion());
+// log.info('==================================================');
 
-autoUpdater.on("checking-for-update", () => {
-  log.info('Checking For Update');
-})
+// autoUpdater.on("checking-for-update", () => {
+//   log.info('Checking For Update');
+// })
 
-autoUpdater.on("update-available", () => {
-  log.info('Update Available');
-})
+// autoUpdater.on("update-available", () => {
+//   log.info('Update Available');
+// })
 
-autoUpdater.on("update-not-available", () => {
-  log.info('Update Not Available');
-})
+// autoUpdater.on("update-not-available", () => {
+//   log.info('Update Not Available');
+// })
 
-autoUpdater.on("error", (err) => {
-  log.info('Error', err);
-})
+// autoUpdater.on("error", (err) => {
+//   log.info('Error', err);
+// })
 
-autoUpdater.on("download-progress", (processTrack) => {
-  log.info('\n\ndownload-progress');
-  log.info(processTrack);
-})
+// autoUpdater.on("download-progress", (processTrack) => {
+//   log.info('\n\ndownload-progress');
+//   log.info(processTrack);
+// })
 
-autoUpdater.on("update-downloaded", (info) => {
-  log.info('Update Downloaded', info);
-})
+// autoUpdater.on("update-downloaded", (info) => {
+//   log.info('Update Downloaded', info);
+// })
 
-app.on("ready", () => {
-  autoUpdater.checkForUpdatesAndNotify()
-})
+// app.on("ready", () => {
+//   autoUpdater.checkForUpdatesAndNotify()
+// })
 
 class AppUpdater {
   constructor() {
