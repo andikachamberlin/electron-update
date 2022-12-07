@@ -251,7 +251,8 @@
     "publish": {
       "provider": "github",
       "owner": "andikachamberlin",
-      "repo": "electron-update"
+      "repo": "electron-update",
+      "private": false
     }
   },
   "collective": {
