@@ -15,10 +15,6 @@ import log from 'electron-log';
 import MenuBuilder from './menu';
 import { resolveHtmlPath } from './util';
 
-console.log('-----------------', app.isPackaged);
-
-log.transports.file.resolvePath = () => path.join('logs/main.log');
-
 // log.info('==================================================');
 // log.info('App Version', app.getVersion());
 // log.info('==================================================');
